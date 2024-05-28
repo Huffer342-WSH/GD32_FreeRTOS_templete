@@ -19,9 +19,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, ALLOC, LOAD, READONLY, DATA
   7 .data         00000058  20000000  08004798  00006000  2**2
                   CONTENTS, ALLOC, LOAD, DATA
-  8 .bss          00001300  20000058  080047f0  00006058  2**2
+  8 .bss          00001328  20000058  080047f0  00006058  2**2
                   ALLOC
-  9 ._user_heap_stack 00000200  20001358  080047f0  00006358  2**0
+  9 ._user_heap_stack 00000200  20001380  080047f0  00006380  2**0
                   ALLOC
  10 .ARM.attributes 00000030  00000000  00000000  00006058  2**0
                   CONTENTS, READONLY
@@ -327,7 +327,7 @@ Disassembly of section .text:
 
 080003f0 <delay>:
 #define IDLE_TASK_STACK_SIZE 32
-#define TIMER_TASK_STACK_SIZE 40
+#define TIMER_TASK_STACK_SIZE 50
 
 static void delay()
 {
@@ -364,8 +364,8 @@ static void delay()
 }
  8000414:	4770      	bx	lr
  8000416:	bf00      	nop
- 8000418:	20000328 	.word	0x20000328
- 800041c:	200002a8 	.word	0x200002a8
+ 8000418:	20000350 	.word	0x20000350
+ 800041c:	200002d0 	.word	0x200002d0
 
 08000420 <vApplicationGetTimerTaskMemory>:
 {
@@ -380,12 +380,12 @@ static void delay()
  8000424:	4b03      	ldr	r3, [pc, #12]	@ (8000434 <vApplicationGetTimerTaskMemory+0x14>)
  8000426:	600b      	str	r3, [r1, #0]
 	*pulTimerTaskStackSize = (uint32_t)TIMER_TASK_STACK_SIZE;
- 8000428:	2328      	movs	r3, #40	@ 0x28
+ 8000428:	2332      	movs	r3, #50	@ 0x32
  800042a:	6013      	str	r3, [r2, #0]
 }
  800042c:	4770      	bx	lr
  800042e:	bf00      	nop
- 8000430:	20000250 	.word	0x20000250
+ 8000430:	20000278 	.word	0x20000278
  8000434:	200001b0 	.word	0x200001b0
 
 08000438 <configureTimerForRunTimeStats>:
@@ -788,7 +788,7 @@ LoopForever:
   ldr r2, =_sbss
  80005f8:	20000058 	.word	0x20000058
   ldr r4, =_ebss
- 80005fc:	20001358 	.word	0x20001358
+ 80005fc:	20001380 	.word	0x20001380
 
 08000600 <ADC_CMP_IRQHandler>:
  * @retval : None
@@ -1463,9 +1463,9 @@ void USART1_IRQHandler(void)
  8000a64:	07040004 	.word	0x07040004
  8000a68:	40004400 	.word	0x40004400
  8000a6c:	40020000 	.word	0x40020000
- 8000a70:	20000380 	.word	0x20000380
- 8000a74:	20000384 	.word	0x20000384
- 8000a78:	20000388 	.word	0x20000388
+ 8000a70:	200003a8 	.word	0x200003a8
+ 8000a74:	200003ac 	.word	0x200003ac
+ 8000a78:	200003b0 	.word	0x200003b0
 
 08000a7c <prvResetNextTaskUnblockTime>:
 #endif /* INCLUDE_vTaskDelete */
@@ -1503,8 +1503,8 @@ static void prvResetNextTaskUnblockTime( void )
     }
 }
  8000a9a:	4770      	bx	lr
- 8000a9c:	20000404 	.word	0x20000404
- 8000aa0:	2000039c 	.word	0x2000039c
+ 8000a9c:	2000042c 	.word	0x2000042c
+ 8000aa0:	200003c4 	.word	0x200003c4
 
 08000aa4 <prvInitialiseNewTask>:
 {
@@ -1640,14 +1640,14 @@ static void prvResetNextTaskUnblockTime( void )
 }
  8000b98:	bd38      	pop	{r3, r4, r5, pc}
  8000b9a:	bf00      	nop
- 8000b9c:	20000430 	.word	0x20000430
- 8000ba0:	2000041c 	.word	0x2000041c
- 8000ba4:	20000408 	.word	0x20000408
- 8000ba8:	200003ec 	.word	0x200003ec
- 8000bac:	200003d8 	.word	0x200003d8
- 8000bb0:	200003c0 	.word	0x200003c0
- 8000bb4:	20000404 	.word	0x20000404
- 8000bb8:	20000400 	.word	0x20000400
+ 8000b9c:	20000458 	.word	0x20000458
+ 8000ba0:	20000444 	.word	0x20000444
+ 8000ba4:	20000430 	.word	0x20000430
+ 8000ba8:	20000414 	.word	0x20000414
+ 8000bac:	20000400 	.word	0x20000400
+ 8000bb0:	200003e8 	.word	0x200003e8
+ 8000bb4:	2000042c 	.word	0x2000042c
+ 8000bb8:	20000428 	.word	0x20000428
 
 08000bbc <prvAddNewTaskToReadyList>:
 {
@@ -1741,12 +1741,12 @@ static void prvResetNextTaskUnblockTime( void )
                 prvInitialiseTaskLists();
  8000c62:	f7ff ff77 	bl	8000b54 <prvInitialiseTaskLists>
  8000c66:	e7c5      	b.n	8000bf4 <prvAddNewTaskToReadyList+0x38>
- 8000c68:	200003bc 	.word	0x200003bc
- 8000c6c:	20000570 	.word	0x20000570
- 8000c70:	200003b0 	.word	0x200003b0
- 8000c74:	200003a0 	.word	0x200003a0
- 8000c78:	200003b4 	.word	0x200003b4
- 8000c7c:	20000430 	.word	0x20000430
+ 8000c68:	200003e4 	.word	0x200003e4
+ 8000c6c:	20000598 	.word	0x20000598
+ 8000c70:	200003d8 	.word	0x200003d8
+ 8000c74:	200003c8 	.word	0x200003c8
+ 8000c78:	200003dc 	.word	0x200003dc
+ 8000c7c:	20000458 	.word	0x20000458
 
 08000c80 <prvDeleteTCB>:
     {
@@ -1824,9 +1824,9 @@ static void prvResetNextTaskUnblockTime( void )
  8000d02:	bd10      	pop	{r4, pc}
  8000d04:	4770      	bx	lr
  8000d06:	bf00      	nop
- 8000d08:	200003d4 	.word	0x200003d4
- 8000d0c:	200003d8 	.word	0x200003d8
- 8000d10:	200003bc 	.word	0x200003bc
+ 8000d08:	200003fc 	.word	0x200003fc
+ 8000d0c:	20000400 	.word	0x20000400
+ 8000d10:	200003e4 	.word	0x200003e4
 
 08000d14 <prvIdleTask>:
 {
@@ -1845,7 +1845,7 @@ static void prvResetNextTaskUnblockTime( void )
  8000d2e:	f3bf 8f4f 	dsb	sy
  8000d32:	f3bf 8f6f 	isb	sy
  8000d36:	e7ee      	b.n	8000d16 <prvIdleTask+0x2>
- 8000d38:	20000430 	.word	0x20000430
+ 8000d38:	20000458 	.word	0x20000458
 
 08000d3c <prvAddCurrentTaskToDelayedList>:
 #endif /* if ( ( configGENERATE_RUN_TIME_STATS == 1 ) && ( INCLUDE_xTaskGetIdleTaskHandle == 1 ) ) */
@@ -1968,13 +1968,13 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8000dcc:	601c      	str	r4, [r3, #0]
 }
  8000dce:	e7da      	b.n	8000d86 <prvAddCurrentTaskToDelayedList+0x4a>
- 8000dd0:	200003b8 	.word	0x200003b8
- 8000dd4:	20000570 	.word	0x20000570
- 8000dd8:	200003b4 	.word	0x200003b4
- 8000ddc:	20000400 	.word	0x20000400
- 8000de0:	200003c0 	.word	0x200003c0
- 8000de4:	20000404 	.word	0x20000404
- 8000de8:	2000039c 	.word	0x2000039c
+ 8000dd0:	200003e0 	.word	0x200003e0
+ 8000dd4:	20000598 	.word	0x20000598
+ 8000dd8:	200003dc 	.word	0x200003dc
+ 8000ddc:	20000428 	.word	0x20000428
+ 8000de0:	200003e8 	.word	0x200003e8
+ 8000de4:	2000042c 	.word	0x2000042c
+ 8000de8:	200003c4 	.word	0x200003c4
 
 08000dec <xTaskCreateStatic>:
     {
@@ -2202,10 +2202,10 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8000faa:	bf00      	nop
  8000fac:	08004164 	.word	0x08004164
  8000fb0:	08000d15 	.word	0x08000d15
- 8000fb4:	20000398 	.word	0x20000398
- 8000fb8:	2000039c 	.word	0x2000039c
- 8000fbc:	200003b0 	.word	0x200003b0
- 8000fc0:	200003b8 	.word	0x200003b8
+ 8000fb4:	200003c0 	.word	0x200003c0
+ 8000fb8:	200003c4 	.word	0x200003c4
+ 8000fbc:	200003d8 	.word	0x200003d8
+ 8000fc0:	200003e0 	.word	0x200003e0
  8000fc4:	0800431c 	.word	0x0800431c
  8000fc8:	08004118 	.word	0x08004118
 
@@ -2218,7 +2218,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
 }
  8000fd4:	4770      	bx	lr
  8000fd6:	bf00      	nop
- 8000fd8:	20000394 	.word	0x20000394
+ 8000fd8:	200003bc 	.word	0x200003bc
 
 08000fdc <xTaskGetTickCount>:
         xTicks = xTickCount;
@@ -2227,7 +2227,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
 }
  8000fe0:	4770      	bx	lr
  8000fe2:	bf00      	nop
- 8000fe4:	200003b8 	.word	0x200003b8
+ 8000fe4:	200003e0 	.word	0x200003e0
 
 08000fe8 <pcTaskGetName>:
 {
@@ -2252,7 +2252,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8001010:	4802      	ldr	r0, [pc, #8]	@ (800101c <pcTaskGetName+0x34>)
  8001012:	f7ff fc13 	bl	800083c <assert_failed>
  8001016:	e7ea      	b.n	8000fee <pcTaskGetName+0x6>
- 8001018:	20000570 	.word	0x20000570
+ 8001018:	20000598 	.word	0x20000598
  800101c:	08004118 	.word	0x08004118
 
 08001020 <xTaskIncrementTick>:
@@ -2431,18 +2431,18 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
 }
  800115c:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
  800115e:	bf00      	nop
- 8001160:	20000394 	.word	0x20000394
- 8001164:	200003b8 	.word	0x200003b8
- 8001168:	20000404 	.word	0x20000404
- 800116c:	20000400 	.word	0x20000400
- 8001170:	200003a4 	.word	0x200003a4
- 8001174:	2000039c 	.word	0x2000039c
- 8001178:	200003a8 	.word	0x200003a8
+ 8001160:	200003bc 	.word	0x200003bc
+ 8001164:	200003e0 	.word	0x200003e0
+ 8001168:	2000042c 	.word	0x2000042c
+ 800116c:	20000428 	.word	0x20000428
+ 8001170:	200003cc 	.word	0x200003cc
+ 8001174:	200003c4 	.word	0x200003c4
+ 8001178:	200003d0 	.word	0x200003d0
  800117c:	08004118 	.word	0x08004118
- 8001180:	200003b4 	.word	0x200003b4
- 8001184:	20000430 	.word	0x20000430
- 8001188:	20000570 	.word	0x20000570
- 800118c:	200003ac 	.word	0x200003ac
+ 8001180:	200003dc 	.word	0x200003dc
+ 8001184:	20000458 	.word	0x20000458
+ 8001188:	20000598 	.word	0x20000598
+ 800118c:	200003d4 	.word	0x200003d4
 
 08001190 <xTaskResumeAll>:
 {
@@ -2612,15 +2612,15 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
 }
  80012c4:	4620      	mov	r0, r4
  80012c6:	bd38      	pop	{r3, r4, r5, pc}
- 80012c8:	20000394 	.word	0x20000394
- 80012cc:	200003bc 	.word	0x200003bc
+ 80012c8:	200003bc 	.word	0x200003bc
+ 80012cc:	200003e4 	.word	0x200003e4
  80012d0:	08004118 	.word	0x08004118
- 80012d4:	200003ec 	.word	0x200003ec
- 80012d8:	200003b4 	.word	0x200003b4
- 80012dc:	20000430 	.word	0x20000430
- 80012e0:	20000570 	.word	0x20000570
- 80012e4:	200003a8 	.word	0x200003a8
- 80012e8:	200003ac 	.word	0x200003ac
+ 80012d4:	20000414 	.word	0x20000414
+ 80012d8:	200003dc 	.word	0x200003dc
+ 80012dc:	20000458 	.word	0x20000458
+ 80012e0:	20000598 	.word	0x20000598
+ 80012e4:	200003d0 	.word	0x200003d0
+ 80012e8:	200003d4 	.word	0x200003d4
 
 080012ec <xTaskDelayUntil>:
     {
@@ -2723,8 +2723,8 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
         BaseType_t xAlreadyYielded, xShouldDelay = pdFALSE;
  80013ac:	2400      	movs	r4, #0
  80013ae:	e7ed      	b.n	800138c <xTaskDelayUntil+0xa0>
- 80013b0:	20000394 	.word	0x20000394
- 80013b4:	200003b8 	.word	0x200003b8
+ 80013b0:	200003bc 	.word	0x200003bc
+ 80013b4:	200003e0 	.word	0x200003e0
  80013b8:	08004118 	.word	0x08004118
 
 080013bc <vTaskSwitchContext>:
@@ -2839,13 +2839,13 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  80014a0:	eb03 0382 	add.w	r3, r3, r2, lsl #2
  80014a4:	6059      	str	r1, [r3, #4]
  80014a6:	e7d6      	b.n	8001456 <vTaskSwitchContext+0x9a>
- 80014a8:	20000394 	.word	0x20000394
- 80014ac:	200003a8 	.word	0x200003a8
- 80014b0:	2000038c 	.word	0x2000038c
- 80014b4:	20000390 	.word	0x20000390
- 80014b8:	20000570 	.word	0x20000570
- 80014bc:	200003b4 	.word	0x200003b4
- 80014c0:	20000430 	.word	0x20000430
+ 80014a8:	200003bc 	.word	0x200003bc
+ 80014ac:	200003d0 	.word	0x200003d0
+ 80014b0:	200003b4 	.word	0x200003b4
+ 80014b4:	200003b8 	.word	0x200003b8
+ 80014b8:	20000598 	.word	0x20000598
+ 80014bc:	200003dc 	.word	0x200003dc
+ 80014c0:	20000458 	.word	0x20000458
  80014c4:	08004118 	.word	0x08004118
 
 080014c8 <vTaskPlaceOnEventList>:
@@ -2877,7 +2877,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  80014fc:	f7ff f99e 	bl	800083c <assert_failed>
  8001500:	e7e6      	b.n	80014d0 <vTaskPlaceOnEventList+0x8>
  8001502:	bf00      	nop
- 8001504:	20000570 	.word	0x20000570
+ 8001504:	20000598 	.word	0x20000598
  8001508:	08004118 	.word	0x08004118
 
 0800150c <vTaskPlaceOnEventListRestricted>:
@@ -2927,7 +2927,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8001560:	f7ff f96c 	bl	800083c <assert_failed>
  8001564:	e7d7      	b.n	8001516 <vTaskPlaceOnEventListRestricted+0xa>
  8001566:	bf00      	nop
- 8001568:	20000570 	.word	0x20000570
+ 8001568:	20000598 	.word	0x20000598
  800156c:	08004118 	.word	0x08004118
 
 08001570 <xTaskRemoveFromEventList>:
@@ -3048,13 +3048,13 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  800164c:	2000      	movs	r0, #0
     return xReturn;
  800164e:	e7dc      	b.n	800160a <xTaskRemoveFromEventList+0x9a>
- 8001650:	20000394 	.word	0x20000394
- 8001654:	200003b4 	.word	0x200003b4
- 8001658:	20000430 	.word	0x20000430
- 800165c:	20000570 	.word	0x20000570
- 8001660:	200003a8 	.word	0x200003a8
+ 8001650:	200003bc 	.word	0x200003bc
+ 8001654:	200003dc 	.word	0x200003dc
+ 8001658:	20000458 	.word	0x20000458
+ 800165c:	20000598 	.word	0x20000598
+ 8001660:	200003d0 	.word	0x200003d0
  8001664:	08004118 	.word	0x08004118
- 8001668:	200003ec 	.word	0x200003ec
+ 8001668:	20000414 	.word	0x20000414
 
 0800166c <vTaskInternalSetTimeOutState>:
     pxTimeOut->xOverflowCount = xNumOfOverflows;
@@ -3068,8 +3068,8 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
 }
  8001678:	4770      	bx	lr
  800167a:	bf00      	nop
- 800167c:	200003a4 	.word	0x200003a4
- 8001680:	200003b8 	.word	0x200003b8
+ 800167c:	200003cc 	.word	0x200003cc
+ 8001680:	200003e0 	.word	0x200003e0
 
 08001684 <xTaskCheckForTimeOut>:
 {
@@ -3152,8 +3152,8 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8001712:	4620      	mov	r0, r4
  8001714:	bdf8      	pop	{r3, r4, r5, r6, r7, pc}
  8001716:	bf00      	nop
- 8001718:	200003b8 	.word	0x200003b8
- 800171c:	200003a4 	.word	0x200003a4
+ 8001718:	200003e0 	.word	0x200003e0
+ 800171c:	200003cc 	.word	0x200003cc
  8001720:	08004118 	.word	0x08004118
 
 08001724 <vTaskMissedYield>:
@@ -3163,7 +3163,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8001728:	601a      	str	r2, [r3, #0]
 }
  800172a:	4770      	bx	lr
- 800172c:	200003a8 	.word	0x200003a8
+ 800172c:	200003d0 	.word	0x200003d0
 
 08001730 <xTaskGetCurrentTaskHandle>:
         xReturn = pxCurrentTCB;
@@ -3172,7 +3172,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
     }
  8001734:	4770      	bx	lr
  8001736:	bf00      	nop
- 8001738:	20000570 	.word	0x20000570
+ 8001738:	20000598 	.word	0x20000598
 
 0800173c <xTaskGetSchedulerState>:
         if( xSchedulerRunning == pdFALSE )
@@ -3193,8 +3193,8 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
             xReturn = taskSCHEDULER_NOT_STARTED;
  8001750:	2001      	movs	r0, #1
  8001752:	4770      	bx	lr
- 8001754:	200003b0 	.word	0x200003b0
- 8001758:	20000394 	.word	0x20000394
+ 8001754:	200003d8 	.word	0x200003d8
+ 8001758:	200003bc 	.word	0x200003bc
 
 0800175c <prvGetNextExpireTime>:
          * the timer with the nearest expiry time will expire.  If there are no
@@ -3231,7 +3231,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
         return xNextExpireTime;
     }
  8001776:	4770      	bx	lr
- 8001778:	20000644 	.word	0x20000644
+ 8001778:	2000066c 	.word	0x2000066c
 
 0800177c <prvInsertTimerInActiveList>:
 
@@ -3297,8 +3297,8 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
         return xProcessTimerNow;
  80017b8:	e7ea      	b.n	8001790 <prvInsertTimerInActiveList+0x14>
  80017ba:	bf00      	nop
- 80017bc:	20000640 	.word	0x20000640
- 80017c0:	20000644 	.word	0x20000644
+ 80017bc:	20000668 	.word	0x20000668
+ 80017c0:	2000066c 	.word	0x2000066c
 
 080017c4 <prvReloadTimer>:
     {
@@ -3360,7 +3360,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8001820:	f7ff ffd0 	bl	80017c4 <prvReloadTimer>
  8001824:	e7f5      	b.n	8001812 <prvProcessExpiredTimer+0x26>
  8001826:	bf00      	nop
- 8001828:	20000644 	.word	0x20000644
+ 8001828:	2000066c 	.word	0x2000066c
 
 0800182c <prvSwitchTimerLists>:
         }
@@ -3407,8 +3407,8 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
     }
  8001850:	bd08      	pop	{r3, pc}
  8001852:	bf00      	nop
- 8001854:	20000644 	.word	0x20000644
- 8001858:	20000640 	.word	0x20000640
+ 8001854:	2000066c 	.word	0x2000066c
+ 8001858:	20000668 	.word	0x20000668
 
 0800185c <prvSampleTimeNow>:
     {
@@ -3437,7 +3437,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  800187e:	2301      	movs	r3, #1
  8001880:	602b      	str	r3, [r5, #0]
  8001882:	e7f6      	b.n	8001872 <prvSampleTimeNow+0x16>
- 8001884:	20000634 	.word	0x20000634
+ 8001884:	2000065c 	.word	0x2000065c
 
 08001888 <prvProcessTimerOrBlockTask>:
     {
@@ -3495,8 +3495,8 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
     }
  80018f0:	b002      	add	sp, #8
  80018f2:	bd70      	pop	{r4, r5, r6, pc}
- 80018f4:	2000063c 	.word	0x2000063c
- 80018f8:	20000640 	.word	0x20000640
+ 80018f4:	20000664 	.word	0x20000664
+ 80018f8:	20000668 	.word	0x20000668
 
 080018fc <prvProcessReceivedCommands>:
     {
@@ -3618,7 +3618,7 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
     }
  80019f0:	b005      	add	sp, #20
  80019f2:	bd30      	pop	{r4, r5, pc}
- 80019f4:	2000063c 	.word	0x2000063c
+ 80019f4:	20000664 	.word	0x20000664
  80019f8:	0800416c 	.word	0x0800416c
 
 080019fc <prvTimerTask>:
@@ -3689,13 +3689,13 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8001a52:	4b01      	ldr	r3, [pc, #4]	@ (8001a58 <prvCheckForValidListAndQueue+0x44>)
  8001a54:	6018      	str	r0, [r3, #0]
  8001a56:	e7e4      	b.n	8001a22 <prvCheckForValidListAndQueue+0xe>
- 8001a58:	2000063c 	.word	0x2000063c
- 8001a5c:	2000065c 	.word	0x2000065c
- 8001a60:	20000648 	.word	0x20000648
- 8001a64:	20000644 	.word	0x20000644
- 8001a68:	20000640 	.word	0x20000640
- 8001a6c:	20000574 	.word	0x20000574
- 8001a70:	200005bc 	.word	0x200005bc
+ 8001a58:	20000664 	.word	0x20000664
+ 8001a5c:	20000684 	.word	0x20000684
+ 8001a60:	20000670 	.word	0x20000670
+ 8001a64:	2000066c 	.word	0x2000066c
+ 8001a68:	20000668 	.word	0x20000668
+ 8001a6c:	2000059c 	.word	0x2000059c
+ 8001a70:	200005e4 	.word	0x200005e4
 
 08001a74 <xTimerCreateTimerTask>:
     {
@@ -3748,10 +3748,10 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
     }
  8001ad0:	b008      	add	sp, #32
  8001ad2:	bd10      	pop	{r4, pc}
- 8001ad4:	2000063c 	.word	0x2000063c
+ 8001ad4:	20000664 	.word	0x20000664
  8001ad8:	080041b8 	.word	0x080041b8
  8001adc:	080019fd 	.word	0x080019fd
- 8001ae0:	20000638 	.word	0x20000638
+ 8001ae0:	20000660 	.word	0x20000660
  8001ae4:	0800416c 	.word	0x0800416c
 
 08001ae8 <prvHeapInit>:
@@ -3825,11 +3825,11 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
     size_t xTotalHeapSize = configTOTAL_HEAP_SIZE;
  8001b26:	f44f 6340 	mov.w	r3, #3072	@ 0xc00
  8001b2a:	e7e8      	b.n	8001afe <prvHeapInit+0x16>
- 8001b2c:	2000068c 	.word	0x2000068c
- 8001b30:	20000684 	.word	0x20000684
- 8001b34:	20000680 	.word	0x20000680
- 8001b38:	20000678 	.word	0x20000678
- 8001b3c:	2000067c 	.word	0x2000067c
+ 8001b2c:	200006b4 	.word	0x200006b4
+ 8001b30:	200006ac 	.word	0x200006ac
+ 8001b34:	200006a8 	.word	0x200006a8
+ 8001b38:	200006a0 	.word	0x200006a0
+ 8001b3c:	200006a4 	.word	0x200006a4
 
 08001b40 <prvInsertBlockIntoFreeList>:
     BlockLink_t * pxIterator;
@@ -3922,8 +3922,8 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8001b96:	e7f7      	b.n	8001b88 <prvInsertBlockIntoFreeList+0x48>
  8001b98:	4770      	bx	lr
  8001b9a:	bf00      	nop
- 8001b9c:	20000684 	.word	0x20000684
- 8001ba0:	20000680 	.word	0x20000680
+ 8001b9c:	200006ac 	.word	0x200006ac
+ 8001ba0:	200006a8 	.word	0x200006a8
 
 08001ba4 <pvPortMalloc>:
 {
@@ -4081,11 +4081,11 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8001caa:	f7fe fdc7 	bl	800083c <assert_failed>
     return pvReturn;
  8001cae:	e7a2      	b.n	8001bf6 <pvPortMalloc+0x52>
- 8001cb0:	20000680 	.word	0x20000680
- 8001cb4:	2000067c 	.word	0x2000067c
- 8001cb8:	20000684 	.word	0x20000684
- 8001cbc:	20000678 	.word	0x20000678
- 8001cc0:	20000674 	.word	0x20000674
+ 8001cb0:	200006a8 	.word	0x200006a8
+ 8001cb4:	200006a4 	.word	0x200006a4
+ 8001cb8:	200006ac 	.word	0x200006ac
+ 8001cbc:	200006a0 	.word	0x200006a0
+ 8001cc0:	2000069c 	.word	0x2000069c
  8001cc4:	080041c0 	.word	0x080041c0
 
 08001cc8 <vPortFree>:
@@ -4161,8 +4161,8 @@ static void prvAddCurrentTaskToDelayedList( TickType_t xTicksToWait,
  8001d60:	4770      	bx	lr
  8001d62:	bf00      	nop
  8001d64:	080041c0 	.word	0x080041c0
- 8001d68:	2000067c 	.word	0x2000067c
- 8001d6c:	20000670 	.word	0x20000670
+ 8001d68:	200006a4 	.word	0x200006a4
+ 8001d6c:	20000698 	.word	0x20000698
 
 08001d70 <vListInitialise>:
 void vListInitialise( List_t * const pxList )
@@ -5865,10 +5865,10 @@ static void _DoInit(void) {
 }
  8002720:	bd10      	pop	{r4, pc}
  8002722:	bf00      	nop
- 8002724:	20001308 	.word	0x20001308
+ 8002724:	20001330 	.word	0x20001330
  8002728:	08004270 	.word	0x08004270
- 800272c:	20001290 	.word	0x20001290
- 8002730:	2000128c 	.word	0x2000128c
+ 800272c:	200012b8 	.word	0x200012b8
+ 8002730:	200012b4 	.word	0x200012b4
  8002734:	08004330 	.word	0x08004330
 
 08002738 <SEGGER_RTT_WriteNoLock>:
@@ -5961,7 +5961,7 @@ unsigned SEGGER_RTT_WriteNoLock(unsigned BufferIndex, const void* pBuffer, unsig
  800279c:	2500      	movs	r5, #0
   return Status;
  800279e:	e7f6      	b.n	800278e <SEGGER_RTT_WriteNoLock+0x56>
- 80027a0:	20001308 	.word	0x20001308
+ 80027a0:	20001330 	.word	0x20001330
 
 080027a4 <SEGGER_RTT_Write>:
 *    Number of bytes which have been stored in the "Up"-buffer.
@@ -5999,7 +5999,7 @@ unsigned SEGGER_RTT_Write(unsigned BufferIndex, const void* pBuffer, unsigned Nu
   INIT();
  80027d2:	f7ff ff7b 	bl	80026cc <_DoInit>
  80027d6:	e7ee      	b.n	80027b6 <SEGGER_RTT_Write+0x12>
- 80027d8:	20001308 	.word	0x20001308
+ 80027d8:	20001330 	.word	0x20001330
 
 080027dc <SEGGER_RTT_WriteString>:
 *  Notes
@@ -7532,7 +7532,7 @@ static void vPortEnableVFP( void )
  8002f5c:	f3af 8000 	nop.w
 
 08002f60 <pxCurrentTCBConst2>:
- 8002f60:	20000570 	.word	0x20000570
+ 8002f60:	20000598 	.word	0x20000598
 
 08002f64 <vPortEnterCritical>:
 {
@@ -7639,7 +7639,7 @@ static void vPortEnableVFP( void )
  800305c:	f3af 8000 	nop.w
 
 08003060 <pxCurrentTCBConst>:
- 8003060:	20000570 	.word	0x20000570
+ 8003060:	20000598 	.word	0x20000598
 
 08003064 <SysTick_Handler>:
 {
@@ -7817,8 +7817,8 @@ static void vPortEnableVFP( void )
  80031d8:	410fc271 	.word	0x410fc271
  80031dc:	410fc270 	.word	0x410fc270
  80031e0:	e000e400 	.word	0xe000e400
- 80031e4:	20001354 	.word	0x20001354
- 80031e8:	20001350 	.word	0x20001350
+ 80031e4:	2000137c 	.word	0x2000137c
+ 80031e8:	20001378 	.word	0x20001378
  80031ec:	0800427c 	.word	0x0800427c
  80031f0:	20000054 	.word	0x20000054
 

@@ -5806,7 +5806,7 @@ LOAD D:/SDK/arm-gnu-toolchain-13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thum
  .igot.plt      0x20000058        0x0 D:/SDK/arm-gnu-toolchain-13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard/crtbegin.o
                 0x20000058                        . = ALIGN (0x4)
 
-.bss            0x20000058     0x1300 load address 0x080047f0
+.bss            0x20000058     0x1328 load address 0x080047f0
                 0x20000058                        _sbss = .
                 0x20000058                        __bss_start__ = _sbss
  *(.bss)
@@ -5820,119 +5820,119 @@ LOAD D:/SDK/arm-gnu-toolchain-13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thum
  .bss.errno     0x200001ac        0x4 D:/SDK/arm-gnu-toolchain-13.2.rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v7e-m+fp/hard\libc_nano.a(libc_a-reent.o)
                 0x200001ac                errno
  .bss.Timer_Stack.2
-                0x200001b0       0xa0 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/Core/freertos.c.obj
+                0x200001b0       0xc8 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/Core/freertos.c.obj
  .bss.Timer_TCB.3
-                0x20000250       0x58 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/Core/freertos.c.obj
+                0x20000278       0x58 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/Core/freertos.c.obj
  .bss.xIdleStack.4
-                0x200002a8       0x80 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/Core/freertos.c.obj
+                0x200002d0       0x80 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/Core/freertos.c.obj
  .bss.xIdleTaskTCBBuffer.5
-                0x20000328       0x58 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/Core/freertos.c.obj
- .bss.rx_size   0x20000380        0x4 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/BSP/src/bsp_uart.c.obj
- .bss.rx_count  0x20000384        0x4 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/BSP/src/bsp_uart.c.obj
+                0x20000350       0x58 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/Core/freertos.c.obj
+ .bss.rx_size   0x200003a8        0x4 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/BSP/src/bsp_uart.c.obj
+ .bss.rx_count  0x200003ac        0x4 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/BSP/src/bsp_uart.c.obj
  .bss.receive_flag
-                0x20000388        0x4 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/BSP/src/bsp_uart.c.obj
+                0x200003b0        0x4 Source/CMakeFiles/GD32_FreeRTOS_templete_0.1.0.dir/BSP/src/bsp_uart.c.obj
  .bss.ulTotalRunTime
-                0x2000038c        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.ulTaskSwitchedInTime
-                0x20000390        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.uxSchedulerSuspended
-                0x20000394        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.xIdleTaskHandle
-                0x20000398        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.xNextTaskUnblockTime
-                0x2000039c        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.uxTaskNumber
-                0x200003a0        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.xNumOfOverflows
-                0x200003a4        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.xYieldPending
-                0x200003a8        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.xPendedTicks
-                0x200003ac        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.xSchedulerRunning
-                0x200003b0        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.uxTopReadyPriority
                 0x200003b4        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.xTickCount
+ .bss.ulTaskSwitchedInTime
                 0x200003b8        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.uxCurrentNumberOfTasks
+ .bss.uxSchedulerSuspended
                 0x200003bc        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.xSuspendedTaskList
-                0x200003c0       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
- .bss.uxDeletedTasksWaitingCleanUp
+ .bss.xIdleTaskHandle
+                0x200003c0        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.xNextTaskUnblockTime
+                0x200003c4        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.uxTaskNumber
+                0x200003c8        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.xNumOfOverflows
+                0x200003cc        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.xYieldPending
+                0x200003d0        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.xPendedTicks
                 0x200003d4        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.xSchedulerRunning
+                0x200003d8        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.uxTopReadyPriority
+                0x200003dc        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.xTickCount
+                0x200003e0        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.uxCurrentNumberOfTasks
+                0x200003e4        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.xSuspendedTaskList
+                0x200003e8       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+ .bss.uxDeletedTasksWaitingCleanUp
+                0x200003fc        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
  .bss.xTasksWaitingTermination
-                0x200003d8       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+                0x20000400       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
  .bss.xPendingReadyList
-                0x200003ec       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+                0x20000414       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
  .bss.pxOverflowDelayedTaskList
-                0x20000400        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+                0x20000428        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
  .bss.pxDelayedTaskList
-                0x20000404        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+                0x2000042c        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
  .bss.xDelayedTaskList2
-                0x20000408       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+                0x20000430       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
  .bss.xDelayedTaskList1
-                0x2000041c       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+                0x20000444       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
  .bss.pxReadyTasksLists
-                0x20000430      0x140 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+                0x20000458      0x140 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
  .bss.pxCurrentTCB
-                0x20000570        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
-                0x20000570                pxCurrentTCB
+                0x20000598        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(tasks.c.obj)
+                0x20000598                pxCurrentTCB
  .bss.xStaticTimerQueue.0
-                0x20000574       0x48 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
+                0x2000059c       0x48 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
  .bss.ucStaticTimerQueueStorage.1
-                0x200005bc       0x78 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
+                0x200005e4       0x78 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
  .bss.xLastTime.2
-                0x20000634        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
+                0x2000065c        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
  .bss.xTimerTaskHandle
-                0x20000638        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
+                0x20000660        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
  .bss.xTimerQueue
-                0x2000063c        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
+                0x20000664        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
  .bss.pxOverflowTimerList
-                0x20000640        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
+                0x20000668        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
  .bss.pxCurrentTimerList
-                0x20000644        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
+                0x2000066c        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
  .bss.xActiveTimerList2
-                0x20000648       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
+                0x20000670       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
  .bss.xActiveTimerList1
-                0x2000065c       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
+                0x20000684       0x14 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(timers.c.obj)
  .bss.xNumberOfSuccessfulFrees
-                0x20000670        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
+                0x20000698        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
  .bss.xNumberOfSuccessfulAllocations
-                0x20000674        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
+                0x2000069c        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
  .bss.xMinimumEverFreeBytesRemaining
-                0x20000678        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
+                0x200006a0        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
  .bss.xFreeBytesRemaining
-                0x2000067c        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
- .bss.pxEnd     0x20000680        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
- .bss.xStart    0x20000684        0x8 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
- .bss.ucHeap    0x2000068c      0xc00 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
+                0x200006a4        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
+ .bss.pxEnd     0x200006a8        0x4 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
+ .bss.xStart    0x200006ac        0x8 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
+ .bss.ucHeap    0x200006b4      0xc00 Source/Middlewares/FreeRTOS/Source/libfreertos_kernel.a(heap_4.c.obj)
  .bss._acDownBuffer
-                0x2000128c        0x4 Source/Drivers/RTT/libSEGGER_RTT.a(SEGGER_RTT.c.obj)
+                0x200012b4        0x4 Source/Drivers/RTT/libSEGGER_RTT.a(SEGGER_RTT.c.obj)
  .bss._acUpBuffer
-                0x20001290       0x78 Source/Drivers/RTT/libSEGGER_RTT.a(SEGGER_RTT.c.obj)
+                0x200012b8       0x78 Source/Drivers/RTT/libSEGGER_RTT.a(SEGGER_RTT.c.obj)
  .bss._SEGGER_RTT
-                0x20001308       0x48 Source/Drivers/RTT/libSEGGER_RTT.a(SEGGER_RTT.c.obj)
-                0x20001308                _SEGGER_RTT
+                0x20001330       0x48 Source/Drivers/RTT/libSEGGER_RTT.a(SEGGER_RTT.c.obj)
+                0x20001330                _SEGGER_RTT
  .bss.ulMaxPRIGROUPValue
-                0x20001350        0x4 Source/Middlewares/FreeRTOS/Source/portable/libfreertos_kernel_port.a(port.c.obj)
+                0x20001378        0x4 Source/Middlewares/FreeRTOS/Source/portable/libfreertos_kernel_port.a(port.c.obj)
  .bss.ucMaxSysCallPriority
-                0x20001354        0x1 Source/Middlewares/FreeRTOS/Source/portable/libfreertos_kernel_port.a(port.c.obj)
+                0x2000137c        0x1 Source/Middlewares/FreeRTOS/Source/portable/libfreertos_kernel_port.a(port.c.obj)
  *(COMMON)
-                0x20001358                        . = ALIGN (0x4)
- *fill*         0x20001355        0x3 
-                0x20001358                        _ebss = .
-                0x20001358                        __bss_end__ = _ebss
+                0x20001380                        . = ALIGN (0x4)
+ *fill*         0x2000137d        0x3 
+                0x20001380                        _ebss = .
+                0x20001380                        __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x20001358      0x200 load address 0x080047f0
-                0x20001358                        . = ALIGN (0x8)
+                0x20001380      0x200 load address 0x080047f0
+                0x20001380                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
                 [!provide]                        PROVIDE (_end = .)
-                0x20001358                        . = (. + _Min_Heap_Size)
-                0x20001558                        . = (. + _Min_Stack_Size)
- *fill*         0x20001358      0x200 
-                0x20001558                        . = ALIGN (0x8)
+                0x20001380                        . = (. + _Min_Heap_Size)
+                0x20001580                        . = (. + _Min_Stack_Size)
+ *fill*         0x20001380      0x200 
+                0x20001580                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a(*)
