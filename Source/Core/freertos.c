@@ -4,7 +4,7 @@
 #include "bsp_log.h"
 
 #define IDLE_TASK_STACK_SIZE 32
-#define TIMER_TASK_STACK_SIZE 40
+#define TIMER_TASK_STACK_SIZE 50
 
 static void delay()
 {
