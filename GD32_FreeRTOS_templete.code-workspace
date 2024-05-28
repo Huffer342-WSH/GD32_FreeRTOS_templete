@@ -1,0 +1,55 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"cmake.generator": "Ninja", //Unix Makefiles}
+		"cmake.saveBeforeBuild": true,
+	},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "Debug-PyOCD",
+				"type": "cortex-debug",
+				"cwd": "${workspaceRoot}",
+				"request": "launch",
+				"armToolchainPath": "D:/SDK/arm-gnu-toolchain-13.2.rel1/bin",
+				"executable": "${workspaceRoot}/bin/Debug/GD32_FreeRTOS_templete_0.1.0.elf",
+				"svdFile": "${workspaceRoot}/Utilities/GD32F3x0.svd",
+				"servertype": "pyocd",
+				"toolchainPrefix": "arm-none-eabi",
+				"targetId": "GD32F310F8",
+				"runToEntryPoint": "main",
+				"showDevDebugOutput": "raw",
+				"overrideResetCommands": [
+					"monitor reset halt"
+				],
+				"postRestartCommands": [
+					"monitor reset halt"
+				],
+			},
+			{
+				"name": "Debug-OpenOCD",
+				"type": "cortex-debug",
+				"cwd": "${workspaceRoot}",
+				"request": "launch",
+				"armToolchainPath": "D:/SDK/arm-gnu-toolchain-13.2.rel1/bin",
+				"executable": "${workspaceRoot}/bin/Debug/GD32_FreeRTOS_templete_0.1.0.elf",
+				"svdFile": "${workspaceRoot}/Utilities/GD32F3x0.svd",
+				"toolchainPrefix": "arm-none-eabi",
+				"targetId": "GD32F310F8",
+				"runToEntryPoint": "main",
+				"showDevDebugOutput": "raw",
+				"servertype": "openocd",
+				"configFiles": [
+					"${workspaceRoot}/Scripts/openocd/cmsisdap_base.cfg"
+				],
+				// "rtos": "auto",
+			}
+		],
+		"compounds": []
+	}
+}

@@ -1,0 +1,91 @@
+#VSCode
+.vscode/c_cpp_properties.json
+.vscode/compile_commands.json
+
+#CMake build
+build*/
+.cache
+
+#Python 
+**/*.pyc
+
+
+#Keil MDK
+Project/Keil/Output/**/*.d
+Project/Keil/Output/**/*.o
+Project/Keil/Output/**/*.crf
+Project/Keil/**/*.uvguix.*
+Project/Keil/**/*.uvoptx
+# User-specific uVision files
+Project/Keil/**/*.opt
+Project/Keil/**/*.uvopt
+Project/Keil/**/*.uvoptx
+Project/Keil/**/*.uvgui
+Project/Keil/**/*.uvgui.*
+Project/Keil/**/*.uvguix.*
+
+# Listing files
+Project/Keil/**/*.cod
+Project/Keil/**/*.htm
+Project/Keil/**/*.i
+Project/Keil/**/*.lst
+Project/Keil/**/*.map
+Project/Keil/**/*.m51
+Project/Keil/**/*.m66
+# define exception below if needed
+Project/Keil/**/*.scr
+
+# Object and HEX files
+# Project/Keil/**/*.axf
+Project/Keil/**/*.b[0-3][0-9]
+Project/Keil/**/*.hex
+Project/Keil/**/*.d
+Project/Keil/**/*.crf
+Project/Keil/**/*.elf
+# Project/Keil/**/*.hex
+Project/Keil/**/*.h86
+# Project/Keil/**/*.lib
+Project/Keil/**/*.obj
+Project/Keil/**/*.o
+Project/Keil/**/*.sbr
+
+# Build files
+# define exception below if needed
+Project/Keil/**/*.bat
+Project/Keil/**/*._ia
+Project/Keil/**/*.__i
+Project/Keil/**/*._ii
+
+# Generated output files
+/Listings/*
+/Objects/*
+
+# Debugger files
+# define exception below if needed
+Project/Keil/*.ini
+
+# Other files
+Project/Keil/**/*.build_log.htm
+Project/Keil/**/*.cdb
+Project/Keil/**/*.dep
+Project/Keil/**/*.ic
+Project/Keil/**/*.lin
+Project/Keil/**/*.lnp
+Project/Keil/**/*.orc
+# define exception below if needed
+Project/Keil/*.pack
+# define exception below if needed
+Project/Keil/*.pdsc
+Project/Keil/*.plg
+# define exception below if needed
+Project/Keil/*.sct
+Project/Keil/*.sfd
+Project/Keil/*.sfr
+# Project/Keil/
+# Miscellaneous
+Project/Keil/*.tra
+Project/Keil/*.bin
+Project/Keil/*.fed
+Project/Keil/*.l1p
+Project/Keil/*.l2p
+Project/Keil/*.iex
